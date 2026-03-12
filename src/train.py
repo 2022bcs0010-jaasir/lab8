@@ -7,7 +7,7 @@ import numpy as np
 import os
 
 
-data = pd.read_csv("data/housing.csv")
+data = pd.read_csv("data/housingdata.csv")
 
 y = data["median_house_value"]
 
