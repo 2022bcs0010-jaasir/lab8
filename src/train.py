@@ -1,13 +1,15 @@
 import pandas as pd
 import json
+import os
+import numpy as np
+
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
-import numpy as np
-import os
-
 
 data = pd.read_csv("data/housingdata.csv")
+
+data = data.fillna(data.mean(numeric_only=True))
 
 y = data["median_house_value"]
 
